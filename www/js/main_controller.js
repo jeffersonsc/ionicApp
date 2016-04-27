@@ -5,8 +5,12 @@ app.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.toggleLeft()
   }
 
-  $scope.printWin = function (val) {
-    $scope.text_print = val;
-    console.log(val);
+  $scope.toggleRight = function () {
+    $ionicSideMenuDelegate.toggleRight()
   }
+
+  $scope.items = [
+    {description: 'Teste de notificação', img: 'http://www.gravatar.com/avatar/00000000000000000000000000000000'},
+    {description: 'Teste de notificação 2', img: 'http://www.gravatar.com/avatar/00000000000000000000000000000000'},
+    {description: 'Teste de notificação 3', img: 'http://www.gravatar.com/avatar/00000000000000000000000000000000'}]
 })

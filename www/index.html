@@ -30,6 +30,9 @@
             <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
           </div>
           <h1 class="title">Quest</h1>
+          <div class="buttons">
+            <button class="button icon button-clear ion-ios-bell" ng-click="toggleRight()"></button>
+          </div>
         </ion-header-bar>
       </ion-side-menu-content>
 
@@ -42,6 +45,18 @@
         </ion-list>
         <ion-list>
           <ion-item> Item 3 </ion-item>
+        </ion-list>
+      </ion-side-menu>
+
+      <ion-side-menu side="right">
+        <ion-list>
+          <ion-item> Notification </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item ng-repeat="item in items" class="item-thumbnail-left">
+            Notification {{item.description}}
+            <img ng-src="{{item.img}}">
+          </ion-item>
         </ion-list>
       </ion-side-menu>
       <ion-content>
